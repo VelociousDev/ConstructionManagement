@@ -24,4 +24,24 @@ class UserController extends Controller
             return redirect('/logout');
         }
     }
+    public function addnewuser(Request $request){
+        // $name = $request->name;
+        // $username = $request->username;
+        // $password = $request->password;
+        // $contact_no = $request->contact_no;
+        // $rank = $request->rank;
+        // $site_id = $request->site_id;
+        // $pan_no = $request->pan_no;
+        // $image = $request->image;
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+    
+        
+        $imageName = time().'.'.$request->image->extension();  
+     
+        $request->image->move(public_path('images/app_images/users'), $imageName);
+        $request->file('image')->getErrorMessage();
+        return "Uploaded";
+    }
 }

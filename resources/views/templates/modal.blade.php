@@ -15,7 +15,7 @@
 
 <div class="modal fade" id="addnewuser" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
-       <form action="adduser" method="post" class="form">
+       <form action="addnewuser" method="post" enctype="multipart/form-data" class="form">
         @csrf
         <div class="modal-content">
             <div class="modal-header">
@@ -26,7 +26,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">                                   
                             <img height= "200" width="200" id="user_image" src="{{asset('/images/noprofile.jpg')}}"  class="rounded-circle img-raised"> 
-                            <input type="file" accept="Image/*" name="user_image" onchange="document.getElementById('user_image').src = window.URL.createObjectURL(this.files[0])">            
+                            <input type="file" accept="Image/*" id="image" name="image" onchange="document.getElementById('user_image').src = window.URL.createObjectURL(this.files[0])">            
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -58,6 +58,29 @@
                     </div>
                  
                 </div>
+            </div>
+            <div class="modal-footer">
+               
+                <button type="button" class="btn btn-primary btn-simple waves-effect" data-dismiss="modal"><a >CLOSE</a></button>
+                <button type="submit" class="btn btn-primary btn-simple btn-round waves-effect"><a >SAVE CHANGES</a></button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="testmodal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+       <form action="#" method="post" class="form">
+        @csrf
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" >Add New User</h4>
+            </div>
+            <div class="modal-body"> 
+               
             </div>
             <div class="modal-footer">
                
