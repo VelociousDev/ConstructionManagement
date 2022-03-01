@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="{{ asset('/plugins/bootstrap/css/bootstrap.min.css') }}"/>
 i<link rel="stylesheet" href="{{ asset('/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
 <link rel="stylesheet" href="{{ asset('/plugins/morrisjs/morris.min.css') }}" />
-
 <link rel="stylesheet" href="{{ asset('/css/main.css') }}"/>
 <link rel="stylesheet" href="{{ asset('/css/color_skins.css') }}"/>
 <link rel="stylesheet" href="{{ asset('/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') }}" />
@@ -43,4 +42,6 @@ body.classList.remove("menu_dark");
 </script>
  @endif
 @endif 
+
+ 
 

@@ -24,4 +24,38 @@ class UserController extends Controller
             return redirect('/logout');
         }
     }
+    public function addnewuser(Request $request){
+        if($request->session()->has('key')){
+            $user_db_conn_name = $request->session()->get('comp_db_conn_name');
+             $imageName = "noprofile.jpg";
+        $request->validate([
+            'contact_no'=>'required|digits:10',
+            'username'=>'required|min:5',
+            'name'=>'required|min:5',
+            'password'=>'required|min:5'
+        ],[
+            'contact_no.digits'=>'Contact Number Should be 10 digits',
+            'contact_no.required'=>'Contact Numeber Is Required',
+            'username.min'=>'Username Should Be Minimum Of 5 Characters',
+            'name.min'=>'Name Should Be Minimum Of 5 Characters',
+            'password.min'=>'Password Should Be Minimum Of 5 Characters',
+        ]);
+        if(isset($request->image)){
+            $request->validate([
+                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            ],
+        ['image.mimes'   => 'Please Select Valid Image Format (Jpeg,Png,Jpg,Gif)',
+        'image.image'=> 'Please Select Valid Image (Jpeg,Png,Jpg,Gif)',
+        'image.uploaded' => 'Please Choose Image Less Than 2 Mb',
+        ]);
+            $imageName = time().'.'.$request->image->extension();  
+            $request->image->move(public_path('images/app_images/users'), $imageName);
+         }
+         $name = $request->name;
+         $username = $request->username;
+         $password = $request->password;
+         $contact_no = $request->contact_no;
+        }
+
+    }
 }

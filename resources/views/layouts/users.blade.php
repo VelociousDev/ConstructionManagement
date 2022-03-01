@@ -26,7 +26,7 @@
                                 <th >Other Site Members</th>
                                 <th>Status</th>
                                 <th>Rights</th>
-                             <th>Work Progress</th>
+                                <th>Work Progress</th>
                                 <th>Pan No.</th>
                                 <th>Action</th>
                             </tr>
@@ -72,7 +72,7 @@
                                         @else
                                         <td><span class="badge badge-danger">{{print_r($userdata['status'], true)}}</span></td>
                                         @endif
-                                        <td>{{print_r($userdata['rights'], true)}}</td>
+                                        <td>{{print_r($userdata['status'], true)}}</td>
                                         <td class="hidden-md-down">
                                             <div class="progress">
                                                 <div class="progress-bar l-blue" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>

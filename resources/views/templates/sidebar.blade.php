@@ -20,12 +20,50 @@
             <li class="header">MAIN</li>
             <li class="active open"><a href="{{url('/dashboard')}}"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>            
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Sites & Users</span> </a>
-                <ul style="list-style-type: none;">
+                <ul style="list-style-type: none; display:none;">
                     <li><a href="{{url('/users')}}"> <i class="zmdi zmdi-face"></i> Users</a></li>
                     <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Sites</a></li>
                 </ul>
             </li>
-            
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Expenses</span> </a>
+                <ul style="list-style-type: none; display:none;">
+                    <li><a href="{{url('/users')}}"> <i class="zmdi zmdi-face"></i> Expense Parties</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Expense Head</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> New Expenses</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Pending Expense</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Verified Expense</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Materials</span> </a>
+                <ul style="list-style-type: none; display:none;">
+                    <li><a href="{{url('/users')}}"> <i class="zmdi zmdi-face"></i> Material Suppliers</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Materials</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Units</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> New Materials Entry</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Pending Materials Entry</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Verified Materials Entry</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Site Bills</span> </a>
+                <ul style="list-style-type: none; display:none;">
+                    <li><a href="{{url('/users')}}"> <i class="zmdi zmdi-face"></i> Bill Parties</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Works</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Works Rate</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> New Bill</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Pending Bills</a></li>
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Verified Bills</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Machinery</span> </a>
+                <ul style="list-style-type: none; display:none;">
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Verified Machineries</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Assets</span> </a>
+                <ul style="list-style-type: none; display:none;">
+                    <li><a href="{{url('/sites')}}"> <i class="zmdi zmdi-city"></i> Verified Assets</a></li>
+                </ul>
+            </li>
         
         
         </ul>

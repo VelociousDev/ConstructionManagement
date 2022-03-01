@@ -18,6 +18,7 @@ Route::post('/loginf', [LoginController::class, 'loginfunc']);
 Route::get('/logout', [LoginController::class, 'logout']);
 // routes for application
 Route::get('/users', [UserController::class, 'index']);
+Route::post('/addnewuser', [UserController::class, 'addnewuser']);
 Route::get('/sites', [SiteController::class, 'index']);
 
 
